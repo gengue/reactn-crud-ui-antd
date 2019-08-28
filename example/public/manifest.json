@@ -1,0 +1,8 @@
+{
+  "short_name": "reactn-crud-ui-antd",
+  "name": "reactn-crud-ui-antd",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
