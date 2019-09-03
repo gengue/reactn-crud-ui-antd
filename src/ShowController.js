@@ -3,7 +3,6 @@ import { withGlobal } from 'reactn';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { List, Typography, Button } from 'antd';
-import { APP_KEY } from 'reactn-crud';
 import { resolveRedirect } from './utils';
 
 function ShowController({
@@ -88,8 +87,8 @@ export default props => {
   const connect = props.Provider ? props.Provider.withGlobal : withGlobal;
 
   const mapStateToProps = global => ({
-    data: global[APP_KEY].resources[resource],
-    loading: global[APP_KEY].loading,
+    data: global.resources[resource],
+    loading: global.loading,
   });
 
   const Controller = connect(mapStateToProps)(withRouter(memo(ShowController)));

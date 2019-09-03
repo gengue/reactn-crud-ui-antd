@@ -3,7 +3,6 @@ import { withGlobal } from 'reactn';
 import PropTypes from 'prop-types';
 import { useDebounce } from 'use-debounce';
 import { Link } from 'react-router-dom';
-import { APP_KEY } from 'reactn-crud';
 import {
   Button,
   message,
@@ -349,12 +348,12 @@ export default props => {
   const connect = props.Provider ? props.Provider.withGlobal : withGlobal;
 
   const mapStateToProps = global => ({
-    data: global[APP_KEY].resources[resource],
-    fetching: global[APP_KEY].loading,
+    data: global.resources[resource],
+    fetching: global.loading,
     loading:
-      !global[APP_KEY].resources[resource].list.loadedOnce &&
-      global[APP_KEY].loading,
-    saving: global[APP_KEY].saving,
+      !global.resources[resource].list.loadedOnce &&
+      global.loading,
+    saving: global.saving,
   });
 
   const Controller = connect(mapStateToProps)(memo(ListController));

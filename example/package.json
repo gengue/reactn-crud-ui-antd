@@ -12,11 +12,11 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.1",
-    "reactn-crud": "^1.0.1",
+    "reactn-crud": "^1.0.4-0",
     "react-scripts": "^1.1.4",
     "reactn": "^2.2.1",
     "reactn-crud-ui-antd": "file:..",
-    "reactn-devtools": "^1.0.1",
+    "reactn-devtools": "^1.1.0",
     "redux": "^4.0.4"
   },
   "scripts": {

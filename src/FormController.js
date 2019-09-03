@@ -2,7 +2,6 @@ import React, { Fragment, memo, useState, useEffect } from 'react';
 import { withGlobal } from 'reactn';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import { APP_KEY } from 'reactn-crud';
 import { Form, Tooltip, Button, Icon, message } from 'antd';
 import { resolveRedirect } from './utils';
 
@@ -164,11 +163,9 @@ export default props => {
   const connect = props.Provider ? props.Provider.withGlobal : withGlobal;
 
   const mapStateToProps = global => ({
-    data: global[APP_KEY].resources[resource],
-    saving: !global[APP_KEY].saving,
-    loading:
-      !global[APP_KEY].resources[resource].list.loadedOnce &&
-      global[APP_KEY].loading,
+    data: global.resources[resource],
+    saving: !global.saving,
+    loading: !global.resources[resource].list.loadedOnce && global.loading,
   });
 
   const Controller = connect(mapStateToProps)(memo(withRouter(FormController)));

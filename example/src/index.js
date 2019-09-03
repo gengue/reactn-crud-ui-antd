@@ -13,8 +13,7 @@ const dataProvider = mockApiClient(
 // set data provider
 settings.set('dataProvider', dataProvider);
 // redux dev tools
-addReactNDevTools();
-addReactNDevTools(Provider);
+addReactNDevTools(Provider, { name: 'reactn_crud_antd' });
 
 ReactDOM.render(
   <Provider>
